@@ -148,21 +148,21 @@ a:hover{ color: var(--linkHover); text-decoration: underline; }
   inset:0;
   background: radial-gradient(circle at 25% 20%, rgba(255,255,255,.65), transparent 45%);
 }
+
 .photo{
   display:flex;
   flex-direction: column;
   gap: 12px;
 }
-.photo .img{
+
+.headshot{
   width: 100%;
+  height: auto;
   border-radius: var(--radius);
-  border: 1px dashed rgba(31,41,55,.18);
-  min-height: 160px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color: var(--muted);
-  background: rgba(255,255,255,.6);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 26px rgba(31,41,55,.10);
+  display:block;
+  background: rgba(255,255,255,.7);
 }
 
 .h1{
@@ -172,7 +172,7 @@ a:hover{ color: var(--linkHover); text-decoration: underline; }
 }
 .h2{
   font-size: 18px;
-  margin: 0 0 6px;
+  margin: 0 0 10px;
 }
 .lede{
   color: var(--muted);
@@ -196,6 +196,11 @@ a:hover{ color: var(--linkHover); text-decoration: underline; }
   background: #fff;
   font-size: 14px;
   color: var(--text);
+  text-decoration: none;
+}
+.pill:hover{
+  background: var(--sand);
+  text-decoration: none;
 }
 
 .section{
