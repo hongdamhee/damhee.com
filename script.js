@@ -7,6 +7,4 @@
     if (href === path) a.classList.add("active");
     if (path === "" && href === "index.html") a.classList.add("active");
   });
-
-  // Optional: simple "copy email" behavior if you add a button later.
 })();
