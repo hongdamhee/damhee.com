@@ -1,21 +1,12 @@
-const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = String(new Date().getFullYear());
-
-const toggle = document.querySelector(".nav-toggle");
-const list = document.querySelector(".nav-list");
-
-if (toggle && list) {
-  toggle.addEventListener("click", () => {
-    const isOpen = list.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", String(isOpen));
+// script.js
+(function () {
+  const path = window.location.pathname.split("/").pop() || "index.html";
+  const links = document.querySelectorAll(".nav-links a");
+  links.forEach(a => {
+    const href = a.getAttribute("href");
+    if (href === path) a.classList.add("active");
+    if (path === "" && href === "index.html") a.classList.add("active");
   });
 
-  // Close menu when clicking a link (mobile)
-  list.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => {
-      list.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
-    });
-  });
-}
-
+  // Optional: simple "copy email" behavior if you add a button later.
+})();
