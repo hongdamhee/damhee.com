@@ -2,20 +2,17 @@
   --bg:#ffffff;
   --text:#1f2937;
   --muted:#6b7280;
-  --peach:#f7d6c5;
-  --sage:#d7ead9;
-  --lav:#e7def7;
   --sand:#f3efe6;
   --border:rgba(31,41,55,.10);
   --shadow:0 10px 30px rgba(31,41,55,.08);
   --radius:18px;
-  --radius-sm:12px;
   --max:980px;
   --pad:22px;
   --font:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:var(--font);
@@ -26,18 +23,20 @@ body{
 
 .container{
   max-width:var(--max);
-  margin:0 auto;
+  margin:auto;
   padding:26px var(--pad) 70px;
 }
 
-/* Navigation */
+/* NAV BAR */
+
 .nav{
   position:sticky;
   top:0;
-  background:rgba(255,255,255,.9);
+  background:rgba(255,255,255,.95);
   border-bottom:1px solid var(--border);
-  backdrop-filter:blur(10px);
+  backdrop-filter:blur(8px);
 }
+
 .nav-inner{
   max-width:var(--max);
   margin:auto;
@@ -46,8 +45,15 @@ body{
   justify-content:space-between;
   align-items:center;
 }
+
 .brand .name{font-weight:700}
 .brand .tag{font-size:13px;color:var(--muted)}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
 
 .nav-links a{
   margin-left:10px;
@@ -61,22 +67,30 @@ body{
   background:var(--sand);
 }
 
-/* Card */
+/* PASSPORT PHOTO */
+
+.passport-photo{
+  width:80px;
+  height:auto;
+  border-radius:8px;
+  border:1px solid var(--border);
+  box-shadow:0 6px 14px rgba(0,0,0,.12);
+}
+
+/* CONTENT */
+
 .card{
   background:white;
   border:1px solid var(--border);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
   padding:26px;
-  margin-top:20px;
+  margin-top:24px;
 }
 
-/* Text */
 .h1{font-size:34px;margin:0 0 10px}
 .lede{color:var(--muted)}
-.small{font-size:13px;color:var(--muted)}
 
-/* Pills */
 .pills{
   display:flex;
   flex-wrap:wrap;
@@ -93,58 +107,21 @@ body{
 }
 .pill:hover{background:var(--sand)}
 
-/* Sections */
-.section{margin-top:22px}
-.section-header{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:10px;
-}
-.section-title{font-size:18px;margin:0}
-.section-note{font-size:13px;color:var(--muted)}
-
-.list{display:flex;flex-direction:column;gap:12px}
-.item{
-  border:1px solid var(--border);
-  border-radius:var(--radius-sm);
-  padding:14px;
-}
-.item .top{
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-}
-.item .title{font-weight:650}
-.item .meta{font-size:13px;color:var(--muted)}
-.item ul{margin:10px 0 0 18px}
-
-/* Passport photo */
-.passport-photo{
-  position:absolute;
-  top:130px;
-  right:40px;
-  width:110px;
-  height:auto;
-  border-radius:10px;
-  border:1px solid var(--border);
-  box-shadow:0 8px 20px rgba(31,41,55,.12);
-  background:white;
-}
-
-/* Mobile */
-@media(max-width:900px){
-  .passport-photo{
-    position:relative;
-    top:0;
-    right:0;
-    margin:0 0 18px 0;
-  }
-}
-
-/* Divider */
 hr.soft{
   border:0;
   height:1px;
   background:var(--border);
   margin:16px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+  .nav-inner{
+    flex-direction:column;
+    gap:12px;
+  }
+  .nav-right{
+    flex-direction:column;
+  }
 }
