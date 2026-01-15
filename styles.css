@@ -198,7 +198,7 @@ hr.soft{
   text-decoration: none;
 }
 
-/* Sections and lists */
+/* Sections */
 .section{
   margin-top: 18px;
 }
@@ -219,41 +219,12 @@ hr.soft{
   font-size: 13px;
 }
 
-.list{
-  display:flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.item{
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 14px 14px;
-  background: #fff;
-}
-.item .top{
-  display:flex;
-  gap: 10px;
-  align-items:baseline;
-  justify-content: space-between;
-  flex-wrap:wrap;
-}
-.item .title{ font-weight: 650; }
-.item .meta{
-  color: var(--muted);
-  font-size: 13px;
-}
-.item ul{
-  margin: 10px 0 0 18px;
-  color: var(--text);
-}
-.item li{ margin: 4px 0; }
-
 .small{
   font-size: 13px;
   color: var(--muted);
 }
 
-/* RIGHT COLUMN: tiny avatar */
+/* RIGHT COLUMN */
 .right-stack{
   display:flex;
   flex-direction: column;
@@ -261,18 +232,22 @@ hr.soft{
 }
 .avatar-row{
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   gap: 12px;
 }
+
+/* ID photo size */
 .avatar{
-  width: 88px;     /* small, corner-style */
-  height: 88px;
-  border-radius: 16px;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
   object-fit: cover;
   border: 1px solid var(--border);
   box-shadow: 0 10px 22px rgba(31,41,55,.10);
   background: rgba(255,255,255,.7);
+  flex: 0 0 auto;
 }
+
 .avatar-meta{
   display:flex;
   flex-direction: column;
@@ -287,7 +262,19 @@ hr.soft{
   color: var(--muted);
 }
 
-/* MOBILE: make it clean and stacked */
+/* Paragraph blocks inside cards */
+.blurb{
+  margin: 0;
+  color: var(--text);
+}
+.blurb + .blurb{
+  margin-top: 10px;
+}
+.blurb strong{
+  font-weight: 650;
+}
+
+/* MOBILE */
 @media (max-width: 860px){
   .container{ padding: 18px 16px 60px; }
 
@@ -296,7 +283,6 @@ hr.soft{
     align-items:flex-start;
     gap: 10px;
   }
-  .brand{ min-width: unset; }
   .nav-links{
     width: 100%;
     justify-content:flex-start;
@@ -321,8 +307,8 @@ hr.soft{
   .pill{ font-size: 13px; padding: 8px 10px; }
 
   .avatar{
-    width: 72px;
-    height: 72px;
-    border-radius: 14px;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
   }
 }
