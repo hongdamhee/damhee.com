@@ -205,3 +205,31 @@ a:hover{ color:var(--linkHover); text-decoration:underline; }
 .positions-list li:last-child {
   border-bottom: none;
 }
+.contact-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.contact-item a {
+  font-size: 1rem;
+  color: #2f6f73;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
