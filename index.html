@@ -17,7 +17,7 @@
       <div class="tag">Sunnyvale, CA</div>
     </div>
     <nav class="nav-links" aria-label="Primary">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
       <a href="professional-experience.html">Professional Experience</a>
@@ -28,7 +28,10 @@
 </header>
 
 <main id="main" class="container">
+
   <section class="home-grid">
+
+    <!-- LEFT: main content -->
     <div class="card">
       <h1 class="h1">Damhee D. Hong</h1>
       <p class="lede">
@@ -95,17 +98,39 @@
       </div>
     </div>
 
-    <div class="headshot-wrap">
+    <!-- RIGHT: modern boxes with tiny corner avatar -->
+    <div class="right-stack">
+
       <div class="banner" aria-hidden="true"></div>
+
       <div class="card">
-        <h2 class="h2">Photo</h2>
-        <img class="headshot" src="headshot.jpg" alt="Headshot of Damhee Hong" />
-        <p class="small">
-          If the photo does not load, confirm the file is named exactly <strong>headshot.jpg</strong> in your repo.
+        <div class="avatar-row">
+          <img class="avatar" src="headshot.jpg" alt="Headshot of Damhee Hong" />
+          <div class="avatar-meta">
+            <div class="line1">Damhee D. Hong</div>
+            <div class="line2">Higher Education · Research · Student Services</div>
+            <div class="line2">UC Santa Barbara (Ph.D. candidate)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="h2">Quick links</h2>
+        <div class="pills" aria-label="Secondary quick links">
+          <a class="pill" href="research.html">Research</a>
+          <a class="pill" href="teaching.html">Teaching</a>
+          <a class="pill" href="professional-experience.html">Professional Experience</a>
+          <a class="pill" href="contact.html">Contact</a>
+        </div>
+        <p class="small" style="margin-top: 10px;">
+          If the headshot does not load, confirm the file is named <strong>headshot.jpg</strong> in the same folder as this page.
         </p>
       </div>
+
     </div>
+
   </section>
+
 </main>
 
 <script src="script.js"></script>
