@@ -1,10 +1,328 @@
-// script.js
-(function () {
-  const path = window.location.pathname.split("/").pop() || "index.html";
-  const links = document.querySelectorAll(".nav-links a");
-  links.forEach(a => {
-    const href = a.getAttribute("href");
-    if (href === path) a.classList.add("active");
-    if (path === "" && href === "index.html") a.classList.add("active");
-  });
-})();
+/* styles.css */
+:root{
+  --bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+
+  /* Warm pastel palette */
+  --peach: #f7d6c5;
+  --sage: #d7ead9;
+  --lav:  #e7def7;
+  --sand: #f3efe6;
+
+  --card: #ffffff;
+  --border: rgba(31,41,55,.10);
+  --shadow: 0 10px 30px rgba(31,41,55,.08);
+
+  --radius: 18px;
+  --radius-sm: 12px;
+
+  --max: 980px;
+  --pad: 22px;
+
+  --link: #2b5f6a;
+  --linkHover: #1f4b54;
+
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; }
+body{
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+a{ color: var(--link); text-decoration: none; }
+a:hover{ color: var(--linkHover); text-decoration: underline; }
+
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 22px var(--pad) 70px;
+}
+
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  position:static;
+  width:auto;
+  height:auto;
+  padding: 10px 12px;
+  background: var(--sand);
+  border-radius: 10px;
+  display:inline-block;
+}
+
+/* NAV */
+.nav{
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+.nav-inner{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 12px var(--pad);
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brand{
+  display:flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 190px;
+}
+.brand .name{
+  font-weight: 700;
+  letter-spacing: .2px;
+  line-height: 1.1;
+}
+.brand .tag{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.nav-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 8px;
+  justify-content:flex-end;
+}
+.nav-links a{
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+.nav-links a:hover{
+  background: var(--sand);
+  border-color: var(--border);
+  text-decoration: none;
+}
+.nav-links a.active{
+  background: var(--sand);
+  border-color: var(--border);
+}
+
+/* CARDS */
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.banner{
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow:hidden;
+  background: linear-gradient(120deg, var(--peach), var(--sage), var(--lav));
+  min-height: 120px;
+  position: relative;
+}
+.banner::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 25% 20%, rgba(255,255,255,.65), transparent 45%);
+}
+
+/* HOME GRID */
+.home-grid{
+  display:grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Typography */
+.h1{
+  font-size: 34px;
+  letter-spacing: -0.4px;
+  margin: 0 0 10px;
+}
+.h2{
+  font-size: 16px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+.lede{
+  color: var(--muted);
+  font-size: 16px;
+  margin: 0;
+}
+
+hr.soft{
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  margin: 14px 0;
+}
+
+/* Pills */
+.pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+}
+.pill:hover{
+  background: var(--sand);
+  text-decoration: none;
+}
+
+/* Sections and lists */
+.section{
+  margin-top: 18px;
+}
+.section-header{
+  display:flex;
+  align-items:baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.section-title{
+  margin:0;
+  font-size: 18px;
+}
+.section-note{
+  margin:0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.list{
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.item{
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 14px;
+  background: #fff;
+}
+.item .top{
+  display:flex;
+  gap: 10px;
+  align-items:baseline;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+.item .title{ font-weight: 650; }
+.item .meta{
+  color: var(--muted);
+  font-size: 13px;
+}
+.item ul{
+  margin: 10px 0 0 18px;
+  color: var(--text);
+}
+.item li{ margin: 4px 0; }
+
+.small{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* RIGHT COLUMN: tiny avatar */
+.right-stack{
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.avatar-row{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+.avatar{
+  width: 88px;     /* small, corner-style */
+  height: 88px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 22px rgba(31,41,55,.10);
+  background: rgba(255,255,255,.7);
+}
+.avatar-meta{
+  display:flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.avatar-meta .line1{
+  font-weight: 650;
+  font-size: 14px;
+}
+.avatar-meta .line2{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* MOBILE: make it clean and stacked */
+@media (max-width: 860px){
+  .container{ padding: 18px 16px 60px; }
+
+  .nav-inner{
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 10px;
+  }
+  .brand{ min-width: unset; }
+  .nav-links{
+    width: 100%;
+    justify-content:flex-start;
+    gap: 8px;
+  }
+  .nav-links a{
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  .home-grid{
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .card{ padding: 18px; }
+  .h1{ font-size: 28px; }
+  .lede{ font-size: 15px; }
+
+  .pills{ gap: 8px; }
+  .pill{ font-size: 13px; padding: 8px 10px; }
+
+  .avatar{
+    width: 72px;
+    height: 72px;
+    border-radius: 14px;
+  }
+}
