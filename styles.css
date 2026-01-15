@@ -2,126 +2,190 @@
   --bg:#ffffff;
   --text:#1f2937;
   --muted:#6b7280;
+
+  /* warm pastels */
   --sand:#f3efe6;
+  --peach:#f7d6c5;
+  --sage:#d7ead9;
+  --lav:#e7def7;
+
+  --card:#ffffff;
   --border:rgba(31,41,55,.10);
   --shadow:0 10px 30px rgba(31,41,55,.08);
+
   --radius:18px;
-  --max:980px;
+  --radius-sm:12px;
+
+  --max:1000px;
   --pad:22px;
-  --font:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+  --link:#2b5f6a;
+  --linkHover:#1f4b54;
+
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
 }
 
-*{box-sizing:border-box}
-
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
 body{
-  margin:0;
   font-family:var(--font);
   background:var(--bg);
   color:var(--text);
   line-height:1.5;
 }
 
+a{ color:var(--link); text-decoration:none; }
+a:hover{ color:var(--linkHover); text-decoration:underline; }
+
 .container{
   max-width:var(--max);
-  margin:auto;
-  padding:26px var(--pad) 70px;
+  margin:0 auto;
+  padding:28px var(--pad) 80px;
 }
 
-/* NAV BAR */
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  position:static;
+  width:auto;
+  height:auto;
+  padding:10px 12px;
+  background:var(--sand);
+  border-radius:10px;
+  display:inline-block;
+}
 
+/* NAV */
 .nav{
   position:sticky;
   top:0;
-  background:rgba(255,255,255,.95);
+  background:rgba(255,255,255,.90);
+  backdrop-filter:blur(10px);
   border-bottom:1px solid var(--border);
-  backdrop-filter:blur(8px);
+  z-index:10;
 }
-
 .nav-inner{
   max-width:var(--max);
-  margin:auto;
+  margin:0 auto;
   padding:14px var(--pad);
   display:flex;
+  align-items:center;
   justify-content:space-between;
-  align-items:center;
+  gap:14px;
 }
-
-.brand .name{font-weight:700}
-.brand .tag{font-size:13px;color:var(--muted)}
-
-.nav-right{
-  display:flex;
-  align-items:center;
-  gap:16px;
+.brand{
+  font-weight:760;
+  letter-spacing:.2px;
+  white-space:nowrap;
 }
-
-.nav-links a{
-  margin-left:10px;
-  padding:8px 12px;
-  border-radius:999px;
-  text-decoration:none;
-  color:var(--text);
-}
-.nav-links a.active,
-.nav-links a:hover{
-  background:var(--sand);
-}
-
-/* PASSPORT PHOTO */
-
-.passport-photo{
-  width:80px;
-  height:auto;
-  border-radius:8px;
-  border:1px solid var(--border);
-  box-shadow:0 6px 14px rgba(0,0,0,.12);
-}
-
-/* CONTENT */
-
-.card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:26px;
-  margin-top:24px;
-}
-
-.h1{font-size:34px;margin:0 0 10px}
-.lede{color:var(--muted)}
-
-.pills{
+.nav-links{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
-  margin-top:14px;
+  justify-content:flex-end;
 }
-.pill{
-  padding:9px 14px;
+.nav-links a{
+  font-size:14px;
+  padding:8px 10px;
   border-radius:999px;
-  border:1px solid var(--border);
-  background:white;
+  border:1px solid transparent;
+}
+.nav-links a:hover{
+  background:var(--sand);
+  border-color:var(--border);
   text-decoration:none;
-  color:var(--text);
 }
-.pill:hover{background:var(--sand)}
-
-hr.soft{
-  border:0;
-  height:1px;
-  background:var(--border);
-  margin:16px 0;
+.nav-links a.active{
+  background:var(--sand);
+  border-color:var(--border);
 }
 
-/* MOBILE */
+/* CARD */
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:22px;
+}
 
-@media(max-width:900px){
-  .nav-inner{
-    flex-direction:column;
-    gap:12px;
+/* HERO LAYOUT: one bubble, text left + photo/links right */
+.hero-card{
+  display:grid;
+  grid-template-columns: 1fr 260px;
+  gap: 18px;
+  align-items:start;
+  margin-top: 18px;
+}
+@media (max-width: 850px){
+  .hero-card{
+    grid-template-columns: 1fr;
   }
-  .nav-right{
-    flex-direction:column;
-  }
+}
+
+.h1{
+  font-size: 36px;
+  letter-spacing: -0.4px;
+  margin: 0 0 10px;
+}
+.lede{
+  color:var(--muted);
+  font-size:16px;
+  margin:0;
+}
+
+/* RIGHT SIDE */
+.hero-right{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap: 12px;
+}
+
+/* PASSPORT SIZE PHOTO (guaranteed small) */
+.passport{
+  width: 110px !important;
+  height: 140px !important;
+  max-width: 110px !important;
+  max-height: 140px !important;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 22px rgba(31,41,55,.10);
+  display:block;
+}
+
+/* bubble links */
+.bubble-links{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.bubble{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #fff, var(--sand));
+  box-shadow: 0 10px 22px rgba(31,41,55,.06);
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--text);
+  text-decoration:none;
+  white-space: nowrap;
+}
+.bubble:hover{
+  background: var(--sand);
+  text-decoration:none;
 }
