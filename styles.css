@@ -233,3 +233,9 @@ a:hover{ color:var(--linkHover); text-decoration:underline; }
 .contact-item a:hover {
   text-decoration: underline;
 }
+.lede {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #2a4a4f;
+  margin-bottom: 10px;
+}
