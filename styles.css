@@ -269,4 +269,14 @@ a:hover{ color:var(--linkHover); text-decoration:underline; }
     white-space: nowrap;
   }
 }
+.title strong {
+  font-size: 1.05rem;
+  color: #24363a;
+}
 
+.meta {
+  font-size: 0.85rem;
+  color: #6f8a90;
+  margin-bottom: 6px;
+  font-style: italic;
+}
