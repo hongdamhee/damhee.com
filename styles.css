@@ -279,20 +279,22 @@ a:hover{ color:var(--linkHover); text-decoration:underline; }
   color: #6f8a90;
   margin-bottom: 6px;
   font-style: italic;
-}
-.bio-block {
-  background: #faf9f6; /* soft warm neutral */
+
+  .bio-card {
+  background: #faf9f6;
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 12px;
-  padding: 14px 16px;
+  padding: 16px 18px;
   margin-top: 12px;
-  font-size: 0.95rem;
-  line-height: 1.5;
   box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
-/* subtle hover (optional but nice) */
-.bio-block:hover {
-  background: #f5f3ee;
-  transition: 0.2s ease;
+.bio-card p {
+  margin: 0 0 12px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.bio-card p:last-child {
+  margin-bottom: 0;
 }
