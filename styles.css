@@ -280,3 +280,19 @@ a:hover{ color:var(--linkHover); text-decoration:underline; }
   margin-bottom: 6px;
   font-style: italic;
 }
+.bio-block {
+  background: #faf9f6; /* soft warm neutral */
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+/* subtle hover (optional but nice) */
+.bio-block:hover {
+  background: #f5f3ee;
+  transition: 0.2s ease;
+}
