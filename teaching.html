@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RM2ZL7G8FT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RM2ZL7G8FT');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RM2ZL7G8FT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RM2ZL7G8FT');
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Teaching | Damhee D. Hong</title>
   <meta name="description" content="Teaching philosophy, experience, and interests of Damhee D. Hong." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -22,10 +24,15 @@
 <header class="nav">
   <div class="nav-inner">
     <div class="brand">Damhee D. Hong</div>
-    <nav class="nav-links" aria-label="Primary">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
-      <a href="teaching.html">Teaching</a>
+      <a href="teaching.html" class="active">Teaching</a>
       <a href="professional-experience.html">Professional Experience</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -34,100 +41,142 @@
 
 <main id="main" class="container">
 
-  <!-- Bubble 1: Teaching Philosophy -->
-  <div class="card">
-    <div class="section-header">
-      <h1 class="section-title">Teaching Philosophy</h1>
-    </div>
-
-    <p class="lede">
-      My teaching philosophy centers on care, cultural relevance, and student agency. I aim to create learning environments where students feel respected and intellectually challenged, and where course concepts connect to students’ lived experiences. I prioritize dialogue, reflection, and inclusive pedagogy to support critical thinking, confidence, and a sense of belonging.
+  <!-- Philosophy: always visible -->
+  <div class="card rcard">
+    <div class="rcard-eyebrow">Pedagogy</div>
+    <h1 class="rcard-heading">Teaching</h1>
+    <p class="rcard-lede">
+      My teaching philosophy centers on care, cultural relevance, and student agency. I aim to create learning environments where students feel respected and intellectually challenged, and where course concepts connect to students' lived experiences.
+    </p>
+    <p class="rcard-body">
+      I prioritize dialogue, reflection, and inclusive pedagogy to support critical thinking, confidence, and a sense of belonging in every classroom I inhabit.
     </p>
   </div>
 
-  <!-- Bubble 2: Teaching Experience -->
-  <div class="card" style="margin-top: 18px;">
-    <div class="section-header">
-      <h2 class="section-title">Teaching Experience</h2>
+  <!-- Teaching Experience (collapsible, open by default) -->
+  <details class="card rcard rcard-collapsible" style="margin-top:14px;" open>
+    <summary class="rcard-summary">
+      <div class="rcard-summary-left">
+        <div class="rcard-eyebrow">Roles &amp; courses</div>
+        <h2 class="rcard-heading">Teaching Experience</h2>
+      </div>
+      <span class="rcard-chevron" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4.5 6.75 9 11.25l4.5-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </summary>
+
+    <div class="rcard-body-panel">
+      <div class="teach-list">
+
+        <div class="teach-item">
+          <div class="teach-left">
+            <div class="teach-role">Teaching Assistant</div>
+            <div class="teach-org">UC Santa Barbara</div>
+          </div>
+          <div class="teach-right">
+            <div class="teach-courses">
+              <span class="teach-course">ED 125: Schooling in the United States</span>
+              <span class="teach-course">ED 123: Culture, Development, and Education</span>
+              <span class="teach-course">Korean Language courses</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="teach-item">
+          <div class="teach-left">
+            <div class="teach-role">Graduate Teaching Fellow</div>
+            <div class="teach-org">UC Santa Barbara SKILLS Program</div>
+          </div>
+          <div class="teach-right">
+            <p class="teach-note">Supported undergraduate student skill-building through the SKILLS Program.</p>
+          </div>
+        </div>
+
+        <div class="teach-item">
+          <div class="teach-left">
+            <div class="teach-role">Teaching Assistant</div>
+            <div class="teach-org">Northwestern University</div>
+          </div>
+          <div class="teach-right">
+            <div class="teach-courses">
+              <span class="teach-course">SOC POL 332</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="teach-item">
+          <div class="teach-left">
+            <div class="teach-role">English Teacher</div>
+            <div class="teach-org">Peace Corps &mdash; Indonesia</div>
+          </div>
+          <div class="teach-right">
+            <p class="teach-note">SMAN1 Slahung High School, East Java</p>
+          </div>
+        </div>
+
+        <div class="teach-item">
+          <div class="teach-left">
+            <div class="teach-role">English Teacher</div>
+            <div class="teach-org">South Korea</div>
+          </div>
+          <div class="teach-right">
+            <p class="teach-note">Veritas Associates</p>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </details>
 
-    <div class="section">
-      <div class="item">
-        <div class="top">
-          <div class="title">Teaching Assistant, UC Santa Barbara</div>
-        </div>
-        <ul>
-          <li>ED 125: Schooling in the United States </li>
-          <li>ED 123: Culture, Development, and Education </li>
-          <li>Korean Language courses </li>
-        </ul>
+  <!-- Teaching Interests (collapsible, open by default) -->
+  <details class="card rcard rcard-collapsible" style="margin-top:14px;" open>
+    <summary class="rcard-summary">
+      <div class="rcard-summary-left">
+        <div class="rcard-eyebrow">Areas of focus</div>
+        <h2 class="rcard-heading">Teaching Interests</h2>
       </div>
+      <span class="rcard-chevron" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4.5 6.75 9 11.25l4.5-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </summary>
 
-      <div class="item" style="margin-top: 12px;">
-        <div class="top">
-          <div class="title">Graduate Teaching Fellow, UC Santa Barbara SKILLS Program</div>
-        </div>
-        <ul>
-        </ul>
+    <div class="rcard-body-panel">
+      <div class="interests-grid">
+        <div class="interest-chip">Higher education &amp; student development</div>
+        <div class="interest-chip">Equity, identity &amp; belonging</div>
+        <div class="interest-chip">Culturally engaging pedagogy</div>
+        <div class="interest-chip">Qualitative research methods</div>
+        <div class="interest-chip">Asian American &amp; immigrant student experiences</div>
+        <div class="interest-chip">AI as a supportive academic tool</div>
       </div>
-
-      <div class="item" style="margin-top: 12px;">
-        <div class="top">
-          <div class="title">Teaching Assistant, Northwestern University</div>
-        </div>
-        <ul>
-          <li>SOC POL 332 </li>
-        </ul>
-      </div>
-
-      <div class="item" style="margin-top: 12px;">
-        <div class="top">
-          <div class="title">English Teacher, Peace Corps Indonesia</div>
-          <div class="meta">Peace Corps</div>
-        </div>
-        <ul>
-          <li>SMAN1 Slahung High School, East Java</li>
-        </ul>
-      </div>
-
-      <div class="item" style="margin-top: 12px;">
-        <div class="top">
-          <div class="title">English Teacher, South Korea</div>
-        </div>
-        <ul>
-          <li>Veritas Associates</li>
-        </ul>
-      </div>
-
-
     </div>
+  </details>
+
+  <!-- CV link -->
+  <div style="margin-top:22px; text-align:center;">
+    <a class="btn-primary" href="DHong_CV_2026.pdf" target="_blank" rel="noopener">
+      <svg class="btn-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 13h10M8 3v7m0 0-3-3m3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      More info in Curriculum Vitae
+    </a>
   </div>
 
-  <!-- Bubble 3: Teaching Interests -->
-  <div class="card" style="margin-top: 18px;">
-    <div class="section-header">
-      <h2 class="section-title">Teaching Interests</h2>
-      <p class="section-note">Current and future focus</p>
-    </div>
-
-    <div class="item">
-      <ul>
-        <li>Higher education and student development</li>
-        <li>Equity, identity, and belonging</li>
-        <li>Culturally engaging pedagogy</li>
-        <li>Qualitative research methods</li>
-        <li>Asian American and immigrant student experiences</li>
-        <li>AI and learning as supportive academic tools</li>
-      </ul>
-    </div>
-  </div>
-  <!-- Bubble 4: CV Link -->
-  <div class="card" style="margin-top:18px; text-align:center;">
-    <a class="bubble" href="DHong_CV_2026.pdf" target="_blank" rel="noopener">
-      More info available in CV    </a>
-  </div>
 </main>
 
 <script src="script.js"></script>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    navLinks.classList.toggle('nav-open', !open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      navLinks.classList.remove('nav-open');
+    });
+  });
+</script>
 </body>
 </html>
