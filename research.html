@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research | Damhee D. Hong</title>
   <meta name="description" content="Research, publications, and public engagement of Damhee D. Hong." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,9 +16,14 @@
 <header class="nav">
   <div class="nav-inner">
     <div class="brand">Damhee D. Hong</div>
-    <nav class="nav-links" aria-label="Primary">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
+      <a href="research.html" class="active">Research</a>
       <a href="teaching.html">Teaching</a>
       <a href="professional-experience.html">Professional Experience</a>
       <a href="contact.html">Contact</a>
@@ -25,152 +33,221 @@
 
 <main id="main" class="container">
 
-  <!-- Bubble 1: Research Overview -->
-  <div class="card">
-    <div class="section-header">
-      <h1 class="section-title">Research</h1>
-
-    </div>
-
-    <p class="lede">
-      My research interests are grounded in the belief that when students are encouraged to bring their whole selves into educational environments and feel that their cultural, linguistic, and personal identities are valued, they are more likely to experience belonging and to thrive academically and personally.
+  <!-- ── Overview ─────────────────────────────────────────── -->
+  <div class="card rcard">
+    <div class="rcard-eyebrow">Scholarship</div>
+    <h1 class="rcard-heading">Research</h1>
+    <p class="rcard-lede">
+      My research is grounded in the belief that when students are encouraged to bring their whole selves into educational environments — and feel that their cultural, linguistic, and personal identities are valued — they are more likely to experience belonging and to thrive.
     </p>
-<p> </p>
-    <p>
-      My research projects center on exploring how institutional and systemic barriers can be lowered so students can thrive while bringing their full identities into school spaces. Across my projects, I focus on how students from minoritized backgrounds can be supported in ways that recognize and affirm the diverse knowledge, strengths, and lived experiences they bring with them. My work centers Korean American and immigrant-origin communities and uses qualitative inquiry to understand identity, belonging, and access.
+    <p class="rcard-body">
+      Across my projects, I focus on how students from minoritized backgrounds can be supported in ways that recognize and affirm the diverse knowledge, strengths, and lived experiences they bring with them. My work centers Korean American and immigrant-origin communities and uses qualitative inquiry to understand identity, belonging, and access.
     </p>
   </div>
 
- <!-- Bubble 2: Research Areas -->
-<div class="card" style="margin-top:18px;">
-  <div class="section-header">
-    <h2 class="section-title">Research Areas</h2>
-    <p class="section-note">Current and prior projects</p>
+  <!-- ── Research Areas ─────────────────────────────────── -->
+  <div class="card rcard" style="margin-top:14px;">
+    <div class="rcard-eyebrow">Projects</div>
+    <h2 class="rcard-heading">Research Areas</h2>
+
+    <div class="research-areas">
+
+      <!-- 1 -->
+      <div class="ra-item">
+        <div class="ra-left">
+          <div class="ra-tags">
+            <span class="ra-tag ra-tag--primary">Dissertation</span>
+            <span class="ra-tag">In progress</span>
+          </div>
+          <div class="ra-title">Food, Belonging & Campus Climate</div>
+          <div class="ra-keywords">Higher education &middot; Korean American students &middot; campus food &middot; sense of belonging</div>
+        </div>
+        <div class="ra-right">
+          <p>Examines how culturally relevant and familiar food experiences shape Korean American students' sense of belonging on campus. Focuses on how food access and cultural familiarity inform students' interpretations of care, inclusion, and campus climate.</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="ra-item">
+        <div class="ra-left">
+          <div class="ra-tags">
+            <span class="ra-tag ra-tag--primary">Independent project</span>
+            <span class="ra-tag ra-tag--award">&#9733; Poster award</span>
+          </div>
+          <div class="ra-title">AI as an Equity-Centered Learning Tool</div>
+          <div class="ra-keywords">AI &middot; student learning &middot; equity &middot; higher education</div>
+        </div>
+        <div class="ra-right">
+          <p>Explores how AI can serve as a supportive tool for student learning rather than a shortcut or replacement. Focuses on equity-minded approaches to AI integration that support student agency, critical thinking, and access — with presentations at national conferences and an invited talk at the Black AI: Inclusive Innovation for All Conference.</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="ra-item">
+        <div class="ra-left">
+          <div class="ra-tags">
+            <span class="ra-tag ra-tag--primary">Doctoral seminar project</span>
+          </div>
+          <div class="ra-title">Language Access in K–12 Schools</div>
+          <div class="ra-keywords">K–12 &middot; language access &middot; policy communication &middot; families</div>
+        </div>
+        <div class="ra-right">
+          <p>Investigated how K–12 school district websites in California communicate information about interpretation and translation services, with a focus on accessibility, visibility, and how language access policies reach immigrant families.</p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="ra-item">
+        <div class="ra-left">
+          <div class="ra-tags">
+            <span class="ra-tag ra-tag--primary">Master's project</span>
+          </div>
+          <div class="ra-title">Identity & Belonging during COVID</div>
+          <div class="ra-keywords">Korean American &middot; identity &middot; racism &middot; generational status</div>
+        </div>
+        <div class="ra-right">
+          <p>Explored Korean American students' experiences with racism during COVID-19, examining how self-identification as first-, 1.5-, or second-generation Korean American shaped their sense of identity and belonging during a period of heightened anti-Asian violence.</p>
+        </div>
+      </div>
+
+    </div>
   </div>
 
-  <div class="list">
+  <!-- ── Publications ───────────────────────────────────── -->
+  <div class="card rcard" style="margin-top:14px;">
+    <div class="rcard-eyebrow">Peer-reviewed</div>
+    <h2 class="rcard-heading">Publications</h2>
 
-    <div class="item">
-      <div class="top">
-        <div class="title"><strong>Dissertation Research</strong></div>
-        <div class="meta">Higher education | food | belonging | Korean American students</div>
-      </div>
-      <ul>
-        <li>Examines the relationship between comfort or familiar food and Korean American students’ sense of belonging on campus.</li>
-        <li>Focuses on how food access and cultural familiarity shape students’ interpretations of care, inclusion, and campus climate.</li>
-      </ul>
-    </div>
+    <div class="pub-list">
 
-    <div class="item">
-      <div class="top">
-        <div class="title"><strong>AI in Education</strong></div>
-        <div class="meta">AI | student learning | equity | higher education</div>
-      </div>
-      <ul>
-        <li>Explores how AI can be used as a supportive tool for student learning rather than as a shortcut or replacement for learning.</li>
-        <li>Focuses on equity-minded approaches to AI integration that support student agency, critical thinking, and access.</li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <div class="top">
-        <div class="title"><strong>Independent Research Project (Doctoral Program)</strong></div>
-        <div class="meta">K–12 | language access | policy communication</div>
-      </div>
-      <ul>
-        <li>Investigated how K–12 school district websites in California share information about interpretation and translation services.</li>
-        <li>Focused on accessibility, visibility, and how language access information is communicated to families.</li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <div class="top">
-        <div class="title"><strong>Master’s Project (Northwestern University)</strong></div>
-        <div class="meta">Identity | racism | COVID | Korean American generational status</div>
-      </div>
-      <ul>
-        <li>Explored Korean American students’ experiences with racism during COVID.</li>
-        <li>Examined self-identification as first-, 1.5-, or second-generation Korean American and how generational positioning shaped identity and belonging.</li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-  
-  <!-- Bubble 3: Publications -->
-  <div class="card" style="margin-top:18px;">
-    <div class="section-header">
-      <h2 class="section-title">Publications</h2>
-    </div>
-
-    <div class="list">
-
-      <div class="item">
-        <p class="small">
+      <div class="pub-item">
+        <div class="pub-year">2025</div>
+        <div class="pub-content">
           <a href="https://www.journals.uchicago.edu/doi/abs/10.1086/735473" target="_blank" rel="noopener">
-            Sattin-Bajaj, C., Romo-González, L., & Hong, D. (2025). Building Classroom Relationships Through Photovoice: What Immigrant-Origin Students Want Their Teachers to Know and Understand about Them.
+            Sattin-Bajaj, C., Romo-González, L., &amp; Hong, D. Building Classroom Relationships Through Photovoice: What Immigrant-Origin Students Want Their Teachers to Know and Understand about Them.
           </a>
-        </p>
+        </div>
       </div>
 
-      <div class="item">
-        <p class="small">
+      <div class="pub-item">
+        <div class="pub-year">2023</div>
+        <div class="pub-content">
           <a href="https://www.sciencedirect.com/science/article/pii/S0742051X23001087" target="_blank" rel="noopener">
-            Sattin-Bajaj, C., Barrera Alcazar, J., Hong, D., & Romo-González, M. (2023). An expanded framework for preparing teachers to educate children of immigrant backgrounds.
+            Sattin-Bajaj, C., Barrera Alcazar, J., Hong, D., &amp; Romo-González, M. An expanded framework for preparing teachers to educate children of immigrant backgrounds.
           </a>
-        </p>
+        </div>
       </div>
 
     </div>
   </div>
 
-  <!-- Bubble 4: Presentations -->
-  <div class="card" style="margin-top:18px;">
-    <div class="section-header">
-      <h2 class="section-title">Presentations</h2>
-      <p class="section-note">Conference, invited, and scholarly presentations</p>
-    </div>
+  <!-- ── Presentations ──────────────────────────────────── -->
+  <div class="card rcard" style="margin-top:14px;">
+    <div class="rcard-eyebrow">Conference, invited &amp; scholarly</div>
+    <h2 class="rcard-heading">Presentations</h2>
 
-    <ul class="positions-list">
-      <li><strong>Hong, D.</strong> “Not on the Menu: Korean American Students’ Reflections on Campus Food and Belonging.” Roundtable presentation at the American Educational Research Association (AERA) Annual Meeting.</li>
-      <li><strong>Hong, D.</strong> “Eating Together, Standing Strong: Food, Legacy, and Belonging among Korean American Students.” Panel presentation at the Asian Pacific Americans in Higher Education (APAHE) National Conference.</li>
-      <li><strong>Hong, D.</strong> “Beyond the Hype: Critical and Inclusive Uses of AI for Student Success.” Workshop presentation at the Asian Pacific Americans in Higher Education (APAHE) National Conference.</li>
-      <li><strong>Hong, D.</strong> “Using AI as Your Study Buddy.” Invited speaker at the Black AI: Inclusive Innovation for All Conference.</li>
-      <li><strong>Hong, D.</strong> “A Study Buddy, Not a Shortcut: An Asset-Based Approach to Cultivating Ethical Usage of AI.” Poster presentation at the AI Community of Practice Spring Symposium.</li>
-      <li><strong>Hong, D.</strong> “Feeding Diversity: Toward Culturally Sustaining School Food.” Poster presentation at the American Educational Research Association (AERA) Annual Meeting.</li>
-      <li><strong>Hong, D.</strong> “Interpretation and Translation Service at K-12 School District Websites.” Guest lecture in ED 197: Special Topics in Education, Gevirtz School of Education, UC Santa Barbara.</li>
-      <li><strong>Hong, D.</strong> “Provision and Accessibility of Interpretation and Translation Services on K-12 School District Websites.” Roundtable session at the American Educational Research Association (AERA) Annual Meeting.</li>
-      <li><strong>Sattin-Bajaj, C., Romo-González, M., & Hong, D.</strong> “Building Classroom Relationships Through Photovoice.” Roundtable session at the American Educational Research Association (AERA) Annual Meeting.</li>
-      <li><strong>Sattin-Bajaj, C., Barrera Alcazar, J., Hong, D., & Romo-González, M.</strong> “An Expanded Framework for Preparing Teachers to Educate Children of Immigrant Backgrounds.” Paper session at the American Educational Research Association (AERA) Annual Meeting.</li>
-      <li><strong>Hong, D., Su, J., Barrera Alcazar, J., & Romo-González, M.</strong> “Teacher Preparation for Immigrant-Origin Children.” Paper session at the GGSE Research Symposium.</li>
-    </ul>
+    <div class="pres-list">
+
+      <div class="pres-item">
+        <div class="pres-venue">AERA Annual Meeting</div>
+        <div class="pres-title"><strong>Hong, D.</strong> "Not on the Menu: Korean American Students' Reflections on Campus Food and Belonging." Roundtable presentation.</div>
+      </div>
+
+      <div class="pres-item">
+        <div class="pres-venue">APAHE National Conference</div>
+        <div class="pres-title"><strong>Hong, D.</strong> "Eating Together, Standing Strong: Food, Legacy, and Belonging among Korean American Students." Panel presentation.</div>
+      </div>
+
+      <div class="pres-item">
+        <div class="pres-venue">APAHE National Conference</div>
+        <div class="pres-title"><strong>Hong, D.</strong> "Beyond the Hype: Critical and Inclusive Uses of AI for Student Success." Workshop presentation.</div>
+      </div>
+
+      <div class="pres-item">
+        <div class="pres-venue">Black AI: Inclusive Innovation for All Conference</div>
+        <div class="pres-title"><strong>Hong, D.</strong> "Using AI as Your Study Buddy." Invited speaker.</div>
+      </div>
+
+      <div class="pres-item">
+        <div class="pres-venue">AI Community of Practice Spring Symposium</div>
+        <div class="pres-title"><strong>Hong, D.</strong> "A Study Buddy, Not a Shortcut: An Asset-Based Approach to Cultivating Ethical Usage of AI." Poster presentation.</div>
+      </div>
+
+      <div class="pres-item">
+        <div class="pres-venue">AERA Annual Meeting</div>
+        <div class="pres-title"><strong>Hong, D.</strong> "Feeding Diversity: Toward Culturally Sustaining School Food." Poster presentation.</div>
+      </div>
+
+      <div class="pres-item">
+        <div class="pres-venue">ED 197, UC Santa Barbara</div>
+        <div class="pres-title"><strong>Hong, D.</strong> "Interpretation and Translation Service at K-12 School District Websites." Guest lecture.</div>
+      </div>
+
+      <div class="pres-item">
+        <div class="pres-venue">AERA Annual Meeting</div>
+        <div class="pres-title"><strong>Hong, D.</strong> "Provision and Accessibility of Interpretation and Translation Services on K-12 School District Websites." Roundtable session.</div>
+      </div>
+
+      <div class="pres-item">
+        <div class="pres-venue">AERA Annual Meeting</div>
+        <div class="pres-title"><strong>Sattin-Bajaj, C., Romo-González, M., &amp; Hong, D.</strong> "Building Classroom Relationships Through Photovoice." Roundtable session.</div>
+      </div>
+
+      <div class="pres-item">
+        <div class="pres-venue">AERA Annual Meeting</div>
+        <div class="pres-title"><strong>Sattin-Bajaj, C., Barrera Alcazar, J., Hong, D., &amp; Romo-González, M.</strong> "An Expanded Framework for Preparing Teachers to Educate Children of Immigrant Backgrounds." Paper session.</div>
+      </div>
+
+      <div class="pres-item">
+        <div class="pres-venue">GGSE Research Symposium</div>
+        <div class="pres-title"><strong>Hong, D., Su, J., Barrera Alcazar, J., &amp; Romo-González, M.</strong> "Teacher Preparation for Immigrant-Origin Children." Paper session.</div>
+      </div>
+
+    </div>
   </div>
 
-  <!-- Bubble 5: Media / Public Engagement -->
-  <div class="card" style="margin-top:18px;">
-    <div class="section-header">
-      <h2 class="section-title">Media & Public Engagement</h2>
-      <p class="section-note">Scholar features and public scholarship</p>
-    </div>
+  <!-- ── Media & Public Engagement ─────────────────────── -->
+  <div class="card rcard" style="margin-top:14px;">
+    <div class="rcard-eyebrow">Public scholarship</div>
+    <h2 class="rcard-heading">Media &amp; Public Engagement</h2>
 
-    <div class="item">
-      <p class="small">
-        <a href="https://www.feministfoodjournal.com/p/a-plate-of-school-food-with-a-side" target="_blank" rel="noopener">
-          “A Plate of School Food with a Side of Belonging: Scholar Spotlight,” Feminist Food Journal.
-        </a>
-      </p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div class="pub-year">Feature</div>
+        <div class="pub-content">
+          <a href="https://www.feministfoodjournal.com/p/a-plate-of-school-food-with-a-side" target="_blank" rel="noopener">
+            "A Plate of School Food with a Side of Belonging: Scholar Spotlight," <em>Feminist Food Journal</em>.
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Bubble 6: CV Link -->
-  <div class="card" style="margin-top:18px; text-align:center;">
-    <a class="bubble" href="DHong_CV_2026.pdf" target="_blank" rel="noopener">
-      Full list available in Curriculum Vitae
+  <!-- ── CV link ────────────────────────────────────────── -->
+  <div style="margin-top:14px; text-align:center;">
+    <a class="btn-primary" href="DHong_CV_2026.pdf" target="_blank" rel="noopener">
+      <svg class="btn-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 13h10M8 3v7m0 0-3-3m3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Full list in Curriculum Vitae
     </a>
   </div>
 
 </main>
 
 <script src="script.js"></script>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    navLinks.classList.toggle('nav-open', !open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      navLinks.classList.remove('nav-open');
+    });
+  });
+</script>
 </body>
 </html>
