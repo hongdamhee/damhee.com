@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RM2ZL7G8FT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RM2ZL7G8FT');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RM2ZL7G8FT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RM2ZL7G8FT');
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Damhee D. Hong</title>
   <meta name="description" content="Contact information for Damhee D. Hong." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -22,53 +24,150 @@
 <header class="nav">
   <div class="nav-inner">
     <div class="brand">Damhee D. Hong</div>
-    <nav class="nav-links" aria-label="Primary">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
       <a href="professional-experience.html">Professional Experience</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </div>
 </header>
 
 <main id="main" class="container">
 
-  <!-- Contact Bubble -->
-  <div class="card">
-    <div class="section-header">
-      <h1 class="section-title">Contact</h1>
-      <p class="section-note">Let’s connect</p>
-    </div>
+  <!-- Header -->
+  <div class="card rcard">
+    <div class="rcard-eyebrow">Get in touch</div>
+    <h1 class="rcard-heading">Contact</h1>
+    <p class="rcard-lede">
+      I welcome opportunities to connect regarding research, teaching, collaboration, student support, and professional engagement.
+    </p>
+    <p class="rcard-body">
+      Please feel free to reach out with questions, ideas, or potential partnerships. I look forward to hearing from you.
+    </p>
+  </div>
 
-    <p class="lede">
-      I welcome opportunities to connect regarding research, teaching, collaboration, student support, and professional engagement. Please feel free to reach out with questions, ideas, or potential partnerships. I look forward to hearing from you.
+  <!-- Contact links -->
+  <div class="card rcard" style="margin-top:14px;">
+    <div class="rcard-eyebrow">Direct</div>
+    <h2 class="rcard-heading" style="margin-bottom:20px;">Reach out</h2>
+
+    <div class="contact-cards">
+
+      <a class="contact-card" href="mailto:hongdamhee@gmail.com">
+        <div class="contact-card-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="4.5" width="14" height="10.5" rx="1.75" stroke="currentColor" stroke-width="1.3"/>
+            <path d="m2 6 7 5.25L16 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="contact-card-body">
+          <div class="contact-card-label">Email</div>
+          <div class="contact-card-value">hongdamhee@gmail.com</div>
+        </div>
+        <div class="contact-card-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 4l3.5 3-3.5 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
+
+      <a class="contact-card" href="https://www.linkedin.com/in/deedeehong" target="_blank" rel="noopener">
+        <div class="contact-card-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="2" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M5.5 7.5V13M5.5 5v.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M8.5 13V10a2 2 0 0 1 4 0v3M8.5 7.5V13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="contact-card-body">
+          <div class="contact-card-label">LinkedIn</div>
+          <div class="contact-card-value">linkedin.com/in/deedeehong</div>
+        </div>
+        <div class="contact-card-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 4l3.5 3-3.5 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
+
+      <a class="contact-card" href="DHong_CV_2026.pdf" target="_blank" rel="noopener">
+        <div class="contact-card-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="2" width="12" height="14" rx="2" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M6 6h6M6 9h6M6 12h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="contact-card-body">
+          <div class="contact-card-label">Curriculum Vitae</div>
+          <div class="contact-card-value">Download PDF</div>
+        </div>
+        <div class="contact-card-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 4l3.5 3-3.5 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Speaking & Workshops -->
+  <div class="card rcard" style="margin-top:14px;">
+    <div class="rcard-eyebrow">Engagements</div>
+    <h2 class="rcard-heading" style="margin-bottom:16px;">Speaking &amp; Workshops</h2>
+    <p class="rcard-body" style="margin-bottom:22px;">
+      I am available for invited talks, panel discussions, and workshops on topics including culturally relevant pedagogy, Asian American student belonging, equity-centered approaches to AI in education, and supporting immigrant-origin students. I bring both scholarly grounding and practical experience to every engagement.
     </p>
 
-    <div class="contact-list">
-
-      <div class="contact-item">
-        <div class="contact-label">Email</div>
-        <a href="mailto:hongdamhee@gmail.com">hongdamhee@gmail.com</a>
+    <div class="speaking-topics">
+      <div class="speaking-topic">
+        <div class="speaking-topic-dot"></div>
+        <span>Food, culture &amp; belonging in higher education</span>
       </div>
-
-      <div class="contact-item">
-        <div class="contact-label">Curriculum Vitae</div>
-        <a href="DHong_CV_2026.pdf" target="_blank" rel="noopener">Download PDF</a>
+      <div class="speaking-topic">
+        <div class="speaking-topic-dot"></div>
+        <span>Equity-centered AI for student learning</span>
       </div>
-
-      <div class="contact-item">
-        <div class="contact-label">LinkedIn</div>
-        <a href="https://www.linkedin.com/in/deedeehong" target="_blank" rel="noopener">
-          linkedin.com/in/deedeehong
-        </a>
+      <div class="speaking-topic">
+        <div class="speaking-topic-dot"></div>
+        <span>Supporting Asian American &amp; immigrant-origin students</span>
       </div>
+      <div class="speaking-topic">
+        <div class="speaking-topic-dot"></div>
+        <span>Culturally sustaining pedagogy &amp; campus environments</span>
+      </div>
+      <div class="speaking-topic">
+        <div class="speaking-topic-dot"></div>
+        <span>Identity, belonging &amp; campus climate</span>
+      </div>
+    </div>
 
+    <div style="margin-top:22px;">
+      <a class="btn-primary" href="mailto:hongdamhee@gmail.com?subject=Speaking%20or%20Workshop%20Inquiry">
+        <svg class="btn-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="m2 5 6 4.5L14 5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        Inquire about an engagement
+      </a>
     </div>
   </div>
 
 </main>
 
 <script src="script.js"></script>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    navLinks.classList.toggle('nav-open', !open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      navLinks.classList.remove('nav-open');
+    });
+  });
+</script>
 </body>
 </html>
