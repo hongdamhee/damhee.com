@@ -178,11 +178,12 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 
 h1 {
   font-family: var(--font-serif);
-  font-size: 50px;
+  font-size: 44px;
   line-height: 1.08;
   letter-spacing: -0.5px;
   color: var(--text);
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 h1 em {
