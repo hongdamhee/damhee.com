@@ -1019,6 +1019,24 @@ details:not([open]).rcard-collapsible {
   opacity: 0.6;
 }
 
+
+/* Vertical stacked actions (used under photo on homepage) */
+.actions--vertical {
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+.actions--vertical .btn-primary,
+.actions--vertical .btn-secondary {
+  justify-content: center;
+  width: 100%;
+  font-size: 13px;
+  padding: 10px 14px;
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
