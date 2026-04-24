@@ -149,7 +149,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
    ============================================================ */
 .hero {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr;
   gap: 52px;
   align-items: start;
 }
@@ -284,7 +284,7 @@ h1 em {
 .hero-aside {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
   padding-top: 6px;
 }
