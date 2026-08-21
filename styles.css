@@ -1176,3 +1176,27 @@ details:not([open]).rcard-collapsible {
     gap: 14px;
   }
 }
+/* ── Dissertation bubble links ── */
+.diss-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.diss-link {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: var(--surface-2);
+  color: var(--link);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  font-size: 0.9em;
+  border: 1px solid var(--border-2);
+  transition: background-color 0.2s ease;
+}
+
+.diss-link:hover {
+  background-color: var(--accent-light);
+  text-decoration: none;
+}
